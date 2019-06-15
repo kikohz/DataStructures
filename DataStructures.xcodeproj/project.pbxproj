@@ -17,6 +17,7 @@
 		170B313A2111A3BF009EDED7 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170B31392111A3BF009EDED7 /* Queue.swift */; };
 		170B313C2111B598009EDED7 /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170B313B2111B598009EDED7 /* Algorithm.swift */; };
 		171BBB1B2147A64E00657FED /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171BBB1A2147A64E00657FED /* TestFile.swift */; };
+		AF3C969122B4DBFA0007EF05 /* MergeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3C969022B4DBFA0007EF05 /* MergeSort.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		170B31392111A3BF009EDED7 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		170B313B2111B598009EDED7 /* Algorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithm.swift; sourceTree = "<group>"; };
 		171BBB1A2147A64E00657FED /* TestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile.swift; sourceTree = "<group>"; };
+		AF3C969022B4DBFA0007EF05 /* MergeSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSort.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				171BBB1A2147A64E00657FED /* TestFile.swift */,
 				170B31392111A3BF009EDED7 /* Queue.swift */,
 				170B313B2111B598009EDED7 /* Algorithm.swift */,
+				AF3C969022B4DBFA0007EF05 /* MergeSort.swift */,
 			);
 			path = DataStructures;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			files = (
 				170B313A2111A3BF009EDED7 /* Queue.swift in Sources */,
 				170B313C2111B598009EDED7 /* Algorithm.swift in Sources */,
+				AF3C969122B4DBFA0007EF05 /* MergeSort.swift in Sources */,
 				170B313821109FCC009EDED7 /* Stack.swift in Sources */,
 				171BBB1B2147A64E00657FED /* TestFile.swift in Sources */,
 				170B313621104038009EDED7 /* LinkedList.swift in Sources */,
