@@ -21,10 +21,26 @@ class ViewController: UIViewController {
     }
 
     @IBAction func merageSort(_ sender: Any) {
-        var number = [1,6,2,8,9]
-        number.mergeSort(number.startIndex, number.endIndex)
-        print(number)
+//        var number = [1,6,2,8,9]
+//        number.mergeSort(number.startIndex, number.endIndex)
+//        print(number)
+//
+//        var iterator = number.makeIterator()
+//        while let element = iterator.next() {
+//            print(element)
+//        }
+//        let b = Base()
+//        b.method1()
+        if Algorithm().isPrime_1(n: 4) {
+          print("isPrime")
+        }
+        
     }
     
 }
+
+class Base {
+    @objc dynamic func method1() {}
+}
+
 
