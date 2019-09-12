@@ -173,4 +173,106 @@ struct Algorithm {
         }
     }
     
+    func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+        var tempDict = [Int:Int]()
+        for (index, value) in nums.enumerated() {
+            let tempValue = target - value
+            var tempkey = 0
+            let istTurn = tempDict.contains(where: { (key, value) -> Bool in
+                if value == tempValue {
+                    tempkey = key
+                    return true
+                }
+                return false
+            })
+            
+            if istTurn {
+                return [index,tempkey]
+            }
+            tempDict[index] = value
+        }
+        return [0,0]
+//        var i = 0
+//        for iValue in nums {
+//            var j = 0
+//            for jValue in nums {
+//                if i != j{
+//                    if iValue + jValue == target {
+//                        return [i,j]
+//                    }
+//                }
+//                j += 1
+//            }
+//            i += 1
+//        }
+//        return[0]
+    }
+    //[@"12-11", @"12-13",@"12-11", @"12-11", @"12-12", @"12-14"] 去除相同的并且排序
+//    func outRepeat() {
+//        let strArray = ["12-11", "12-13","12-11", "12-11", "12-12", "12-14"]
+//        let temp = strArray.map {
+//            String($0.sorted())
+    //        }
+    //        let setStr = Set(arrayLiteral: strArray)
+    //    }
+    //冒泡
+    func bubbleSort( arr:inout [Int], n:Int) {
+        for i in 0 ..< n-1 {
+            for j in 0 ..< n-1-i {
+                if arr[i] > arr[j + 1] {
+                    arr.swapAt(i, j)
+                }
+            }
+            
+        }
+    }
+    func mySwap<T>(_ i: inout T, _ j: inout T) {
+        let temp = i
+        i = j
+        j = temp
+    }
+    //选择排序
+//选择排序（SelectionSort）是一种简单直观的排序算法。它的工作原理如下，首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置，然后，再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。以此类推，直到所有元素均排序完毕
+    func selectionSort(arr: inout [Int], n:Int) {
+        for i in 0 ..< n {
+            var min = i
+            for j in i+1 ..< n {
+                if j >= n {    //循环结束
+                    break
+                }
+                //找出最小的，下标交换到min，内循环之后找出最小的
+                if arr[j] < arr[min] {
+                    min = j
+                }
+            }
+            //做交换 把最小的放到前面
+            arr.swapAt(i, min)
+        }
+    }
+    //快速排序
+    //每次排序的时候设置一个基准点，将小于等于基准点的数全部放到基准点的左边，将大于等于基准点的数全部放到基准点的右边
+    func quickSort(arr: inout [Int], left:Int, right:Int) {    //arr待排序的数组。 left right 下标
+        if left > right {
+            return
+        }
+        let temp = arr[left]     //基准数
+        var i = left,j = right
+        while i != j {
+            //先从右边开始找，小于基准数的(如果找到的数大于等于基准数，那我们继续循环找)
+            while arr[j] >= temp && i < j {
+                j -= 1
+            }
+            //左边k开始找， 左边大于基准数据的
+            while arr[i] <= temp && i < j {
+                i += 1
+            }
+            //x循环完毕，左右都找到了对于的位置，开始交换
+            arr.swapAt(i, j)
+            //把基准数归位
+            arr.swapAt(left, i)
+        }
+        quickSort(arr: &arr, left: left, right: i-1)   //继续处理左边的
+        quickSort(arr: &arr, left: i+1, right: right)   //继续处理右边的
+        
+    }
 }

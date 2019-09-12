@@ -31,9 +31,12 @@ class ViewController: UIViewController {
 //        }
 //        let b = Base()
 //        b.method1()
-        if Algorithm().isPrime_1(n: 4) {
-          print("isPrime")
+        if Algorithm().isUgly(num: 8) {
+          print("isUgly")
         }
+        
+        let temp = Algorithm().twoSum([3,2,4], 5)
+        print(temp)
         
     }
     
